@@ -10,28 +10,28 @@ import ReadList from '../pages/ReadList/ReadList';
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component:Root,
+  element:<Root></Root>,
     errorElement:<ErrorPage></ErrorPage>,
     children:[{
         index:true,
-        loader:()=>fetch('booksData.json'),
+        loader:()=>fetch('/booksData.json'),
             path:"/",
-    Component: Home,},
+    element: <Home></Home>,},
     {
         path:'/about',
-        Component:About
+        element:<About></About>
     },
 
 {
 path:'readList',
-loader:()=>fetch('booksData.json'),
-Component:ReadList
+loader:()=>fetch('/booksData.json'),
+element:<ReadList></ReadList>
 },
 
     {
         path:'/bookDetails/:id',
-         loader:()=>fetch('booksData.json'),
-        Component:BookDetails
+         loader:()=>fetch('/booksData.json'),
+     element:<BookDetails></BookDetails>
     }
 
    ]

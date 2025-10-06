@@ -3,13 +3,14 @@ import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
         const links = <>
-        <Link to='/'><li className="m-2">Home</li></Link>
-       <Link to='/about'><li className="m-2">About</li></Link>
-       <Link to='/readList'><li className="m-2">ReadList</li></Link>
+        <Link to='/'><li className="m-3 font-extrabold ">Home</li></Link>
+       <Link to='/about'><li className="m-3 font-extrabold ">About</li></Link>
+       <Link to='/readList'><li className="m-3 font-extrabold ">ReadList</li></Link>
         </>
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-      <div className="navbar-start">
+    <div className=" bg-base-100 shadow-sm">
+    <div className=" navbar max-w-6xl mx-auto">
+        <div className="navbar-start ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -35,16 +36,20 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Book | Vibes</a>
+     
+
+        <a className="text-3xl font-extrabold"><span className="text-[#50B1C9]">Book </span>| Vibes</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           {links}
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-4  ">
+           <button className="w-23 btn btn-info hover:saturate-50 hover:rotate-y-20 ">Sing in</button>
+        <a className=" w-23 btn btn-success hover:saturate-50 hover:rotate-y-12">Sing up</a>
       </div>
+    </div>
     </div>
   );
 };

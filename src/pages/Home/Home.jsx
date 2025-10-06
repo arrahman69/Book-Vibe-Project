@@ -10,6 +10,7 @@ const Home = () => {
     return (
         <div>
        <Banner></Banner>
+       {/* <Spinner></Spinner> */}
        <Books data={data}></Books>
         </div>
     );

@@ -1,20 +1,21 @@
 import React from 'react';
-import bookimage from '../../assets/books.jpg'
+import image5 from '../../assets/images5.jpg'
 const Banner = () => {
     return (
-    <div className="hero bg-base-200 min-h-screen">
+    <div className="hero bg-gradient-to-r from-sky-100 to-pink-100 w-[1170px] h-[554px] rounded-[24px] m-[45px] ml-2">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <img
-      src={bookimage}
-      className="max-w-sm rounded-lg shadow-2xl"
+    <img 
+     className=" w-80 ml-30 max-w-sm rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
+      src={image5}
+     
     />
     <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
+      <h1 className="text-5xl font-bold mr-15 text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-purple-500">Books to freshen up <br /> your bookshelf</h1>
+
       <p className="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
+   
       </p>
-      <button className="btn btn-primary">Get Started</button>
+     <button className="btn btn-success w-50">View the List</button>
     </div>
   </div>
 </div>
