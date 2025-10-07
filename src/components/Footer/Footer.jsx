@@ -2,12 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-<footer className="footer footer-horizontal footer-center bg-gradient-to-r from-sky-200 to-pink-100 text-base-content rounded p-10">
-  <nav className="grid grid-flow-col gap-4">
+<footer className="footer footer-horizontal footer-center bg-gradient-to-r from-sky-200 to-pink-100 text-base-content rounded p-10 mt-10 ">
+  <nav className="grid grid-flow-col gap-4 text-1xl font-bold">
+     <a className="link link-hover">Books</a>
+    <a className="link link-hover">Home</a>
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+   
   </nav>
   <nav>
     <div className="grid grid-flow-col gap-4">
@@ -25,6 +26,7 @@ const Footer = () => {
       <a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -47,7 +49,8 @@ const Footer = () => {
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p className="font-bold">Copyright © {new Date().getFullYear()} - All right reserved by <span className="text-2xl">ᴀʙᴅᴜʀ</span> <span className="text-3xl text-sky-600">
+ ʀᴀʜᴍᴀɴ</span></p>
   </aside>
 </footer>
   );

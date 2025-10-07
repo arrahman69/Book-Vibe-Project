@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getStoredBook } from "../../utility/addToDB";
 import Book from "../Book/Book";
+import ReadListBook from "../ReadListBook/ReadListBook";
 
 const ReadList = () => {
   const [readList, setReadList] = useState([]);
@@ -61,11 +62,12 @@ const [sort, setSort]=useState("");
         <TabPanel>
           <h2>Book I read {readList.length}</h2>
 
-          {readList.map((b) => (
-            <Book key={b.bookId} singleBook={b}></Book>
+          {readList.map((readBook) => (
+            <ReadListBook key={readBook.bookId} readBook={readBook}></ReadListBook>
           ))}
         </TabPanel>
         <TabPanel>
+    
           <h2>My Wish List</h2>
         </TabPanel>
       </Tabs>

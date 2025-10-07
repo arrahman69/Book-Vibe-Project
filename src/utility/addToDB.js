@@ -7,16 +7,18 @@ const getStoredBook =() =>{
         return storeBookData
     }
     else{
-        return [];
+      []
     }
 
 }
 const addToStoreDB =(id)=>{
 
+
 const storeBookData=getStoredBook();
+console.log(storeBookData);
 
 if(storeBookData.includes(id)){
-    alert("This Item already exist")
+  return
 }
 else{
     storeBookData.push(id);
